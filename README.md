@@ -12,3 +12,9 @@ npm start
 ```
 
 navigate to http://localhost:8080
+
+# todo
+
+
+* Extract and render bundled-app and replace place-holder app
+* Fix development-logging crash in node.js
