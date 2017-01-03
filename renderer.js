@@ -37,12 +37,12 @@ module.exports = async () => {
 
   // attach aurelia's output to the output body
   for (var child of entry.children) {
-    doc.body.appendChild(child);
+    doc.body.appendChild(doc.adoptNode(child));
   }
 
   let script = doc.createElement("script");
   script.setAttribute("src", "scripts/vendor-bundle.js");  
-  script.setAttribute("data-main", "aurelia-bootstrapper");  
+  script.setAttribute("data-main", "aurelia-bootstrapper");
   doc.body.appendChild(script);
 
   // serialise and return document
